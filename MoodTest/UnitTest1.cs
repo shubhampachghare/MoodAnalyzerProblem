@@ -37,5 +37,17 @@ namespace MoodTest
             // Assert
             Assert.AreEqual(expected, mood);
         }
+        // UC2 null message return happy
+        [TestMethod]
+        public void givenMood_WhenNull_ShouldReturnHappyMood()
+        {
+            // Arrange
+            string expected = "Happy";
+            moodAnalyzer moodAnalyse = new UC2MoodAnalyzer(null);
+            // Act
+            string mood = moodAnalyzer.AnalyseMood();
+            // Assert
+            Assert.AreEqual(expected, mood);
+        }
     }
 }
